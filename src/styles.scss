@@ -1,0 +1,23 @@
+@import './app/common/styles/variables';
+@import './app/common/styles/fonts';
+@import './theme';
+
+// GLOBAL RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Geist' !important;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+// Used to set the max width of the content displayed in the
+// main section.
+.sectionContainer {
+  max-width: var(--max-width);
+}

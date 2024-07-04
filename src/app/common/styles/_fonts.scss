@@ -1,0 +1,26 @@
+// This is the main font used across the whole suite
+// This is been downloaded from https://github.com/vercel/geist-font/releases/tag/1.3.0
+
+@font-face {
+    font-family: 'Geist';
+    src:
+        url('/assets/font/Geist-Regular.woff2') format('woff2'),
+        url('/assets/font/Geist-Regular.woff') format('woff'),
+
+        url('/assets/font/Geist-Medium.woff2') format('woff2'),
+        url('/assets/font/Geist-Medium.woff') format('woff'),
+
+        url('/assets/font/Geist-SmiBold.woff2') format('woff2'),
+        url('/assets/font/Geist-SmiBold.woff') format('woff'),
+
+        url('/assets/font/Geist-Bold.woff2') format('woff2'),
+        url('/assets/font/Geist-Bold.woff') format('woff'),
+
+        url('/assets/font/Geist-Thin.woff2') format('woff2'),
+        url('/assets/font/Geist-Thin.woff') format('woff'),
+
+        url('/assets/font/Geist-Light.woff2') format('woff2'),
+        url('/assets/font/Geist-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

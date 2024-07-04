@@ -1,0 +1,16 @@
+.mainNavbar {
+    height: var(--navbar-height);
+    background-color: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: black;
+}
+
+.branContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

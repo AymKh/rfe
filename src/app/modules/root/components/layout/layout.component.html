@@ -1,0 +1,11 @@
+<div class="mainLayoutContainer">
+    <diva-top-bar (toggle)="toggleSidenav()"></diva-top-bar>
+
+    <!-- ***-->
+    <div class="displaySection">
+        <diva-side-bar></diva-side-bar>
+        <div class="mainDisplayArea">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
