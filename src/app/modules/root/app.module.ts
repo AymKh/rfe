@@ -8,11 +8,13 @@ import { AppComponent } from './views/app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { FileExplorerComponent } from './components/file-explorer/file-explorer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    FileExplorerComponent
   ],
   imports: [
     BrowserModule,
