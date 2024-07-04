@@ -1,7 +1,6 @@
-# DIVA Suite Starter Project
+# Retarded File Manager
 
-This project is a template for all Diva Software -related front end porjects.
-This will help in keeping the suite's UI/UX consistent.
+A simple file maanger inspired by the GitHub file explorer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
@@ -9,5 +8,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Angular (16.2.14)
 - Angular Material (16)
-- Auth0
 - ImageKit

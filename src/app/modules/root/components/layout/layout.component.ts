@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'diva-layout',
@@ -8,10 +7,5 @@ import { SideBarComponent } from '../side-bar/side-bar.component';
 })
 export class LayoutComponent {
 
-  @ViewChild(SideBarComponent) SideBarComponent!: SideBarComponent;
-
-  toggleSidenav() {
-    this.SideBarComponent.sidenav.toggle();
-  }
 
 }

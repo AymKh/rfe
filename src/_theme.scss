@@ -1,8 +1,0 @@
-@use "@angular/material" as mat;
-
-// custom typography
-$diva-chosen-font: mat.define-typography-config($font-family: 'Geist',
-    );
-
-@include mat.core();
-@include mat.typography-hierarchy($diva-chosen-font);

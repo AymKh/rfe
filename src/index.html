@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>DivaSoft | Green Genius</title>
+  <title>Retarded File Explorer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -19,42 +19,13 @@
       align-items: center;
       justify-content: center;
     }
-
-    .loader-progress-container {
-      width: 200px;
-      height: 3px;
-      background-color: transparent;
-      margin-top: 1rem;
-
-      div {
-        width: 0;
-        height: 100%;
-        background-color: black;
-        animation: progressBar 2s ease-in-out;
-        animation-fill-mode: forwards;
-      }
-    }
-
-    @keyframes progressBar {
-      0% {
-        width: 0;
-      }
-
-      100% {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 
 <body class="mat-typography">
   <app-root>
     <div class="gloablSplashScreen">
-      <span>Powered By</span>
-      <img src="assets/images/powered_by_diva.png" alt="diva software">
-      <div class="loader-progress-container">
-        <div></div>
-      </div>
+      <h1>Loading...</h1>
     </div>
   </app-root>
 </body>

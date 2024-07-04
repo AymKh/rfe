@@ -1,6 +1,6 @@
 {
-  "name": "green-genius-project",
-  "version": "1.5.3",
+  "name": "reatarded-file-manager",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
