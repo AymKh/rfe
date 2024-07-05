@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // CUSTOM IMPORTS
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,7 @@ import { FileExplorerComponent } from './components/file-explorer/file-explorer.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MaterialModule,
     SharedModule,
   ],

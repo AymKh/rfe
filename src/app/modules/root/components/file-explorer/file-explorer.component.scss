@@ -4,8 +4,9 @@ table {
     box-shadow: none;
     border: none;
 
-    td {
-        border: none;
-        border-bottom: 1px solid lightgray;
+    td .content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
