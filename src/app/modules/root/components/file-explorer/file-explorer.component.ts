@@ -19,7 +19,7 @@ export class FileExplorerComponent implements OnInit {
   protected latested_fodler_id: string = '';
 
   // (optional) local attribute used to track the nested path
-  protected visited_routes: string[] = [];
+  protected visited_routes: string[] = [''];
 
   constructor(
     private readonly driveService: DriveService,
@@ -43,14 +43,18 @@ export class FileExplorerComponent implements OnInit {
   resetFolderIdOnRefresh() {
     const CURRENT_URL_STRING = this.router.url;
 
-    if (CURRENT_URL_STRING === '/')
+    if (CURRENT_URL_STRING === '/') {
       this.latested_fodler_id = '0';
-    else
-      this.latested_fodler_id = CURRENT_URL_STRING.split('/').pop() || '0';
+      this.visited_routes = ['0'];
+    } else {
+      this.latested_fodler_id = CURRENT_URL_STRING.split('/').pop() || '';
+      this.visited_routes = CURRENT_URL_STRING.split('/');
+    }
   }
 
+
   /**
-   * This function fetches the drive content where all the elements have a prent_node
+   * This function fetches the drive content where all the elements have a parent_node
    * set to passed in id
    * @param id - The id of clicked folder (aka potential parent_node for other elements)
    */
@@ -61,10 +65,9 @@ export class FileExplorerComponent implements OnInit {
         this.updateBreadcrumb(id);
         //updating url
         const newUrl = this.visited_routes.join('/');
-        this.location.replaceState(newUrl)
+        this.location.replaceState(newUrl);
       });
   }
-
 
   updateBreadcrumb(id: string) {
     const idIndex = this.visited_routes.indexOf(id);
@@ -75,7 +78,5 @@ export class FileExplorerComponent implements OnInit {
     } else {
       this.visited_routes = this.visited_routes.slice(0, idIndex + 1);
     }
-
-    // this.latested_fodler_id = id;
   }
 }
