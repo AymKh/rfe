@@ -1,7 +1,7 @@
 <header>
     <Strong>Current Route</Strong>
     <div>
-        <span>test/route/here</span>
+        <a *ngFor="let route of visited_routes" (click)="fetchDriveContent(route)">{{route}} 👉 </a>
     </div>
 </header>
 
