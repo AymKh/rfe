@@ -28,9 +28,7 @@ export class FileExplorerComponent implements OnInit {
 
   fetchDriveContent(id: string) {
     this.driveService.GET(id)
-      .then((res: any) => {
-        this.dataSource = res;
-      })
+      .then((res: any) => { this.dataSource = res; })
   }
 
 }
