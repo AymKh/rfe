@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IDocument } from 'src/app/common/types/types';
 import { DriveService } from 'src/app/services/drive.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'diva-file-explorer',
@@ -24,6 +25,7 @@ export class FileExplorerComponent implements OnInit {
     private readonly driveService: DriveService,
     private readonly router: Router,
     private readonly currentRoute: ActivatedRoute,
+    private location: Location,
   ) { }
 
   ngOnInit(): void {
@@ -48,7 +50,7 @@ export class FileExplorerComponent implements OnInit {
   }
 
   /**
-   * This function fetches the drive content where all the elements have a parent_node
+   * This function fetches the drive content where all the elements have a prent_node
    * set to passed in id
    * @param id - The id of clicked folder (aka potential parent_node for other elements)
    */
@@ -56,18 +58,24 @@ export class FileExplorerComponent implements OnInit {
     this.driveService.GET(id)
       .then((res: any) => {
         this.dataSource = res;
-        // updating the url to include all the visited folders
-        this.router.navigate(['./', id], { relativeTo: this.currentRoute });
         this.updateBreadcrumb(id);
-      })
+        //updating url
+        const newUrl = this.visited_routes.join('/');
+        this.location.replaceState(newUrl)
+      });
   }
+
 
   updateBreadcrumb(id: string) {
-    // if id is already there, remove it
-    if (this.visited_routes.includes(id) && id !== this.latested_fodler_id) return;
+    const idIndex = this.visited_routes.indexOf(id);
 
-    // otherwise push it....
-    else this.visited_routes.push(id);
+    if (idIndex === -1) {
+      this.visited_routes.push(id);
+
+    } else {
+      this.visited_routes = this.visited_routes.slice(0, idIndex + 1);
+    }
+
+    // this.latested_fodler_id = id;
   }
-
 }
